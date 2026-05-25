@@ -1,0 +1,9 @@
+# Arquivos compilados e executáveis
+*.exe
+*.out
+*.app
+*.o
+*.obj
+
+# Configurações de editores de código (como o VS Code)
+.vscode/
