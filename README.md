@@ -31,4 +31,5 @@ Projeto construído de forma colaborativa pelas turmas ADS03M1 e SI03M1:
 * Yasmin Gomes de Matos
 
 **Orientador:** Prof. Paulo Augusto
+
 **Instituição:** UNIEURO - Brasília, 2026
