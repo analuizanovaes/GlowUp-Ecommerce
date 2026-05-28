@@ -26,6 +26,8 @@ Para testar a aplicação localmente, certifique-se de ter um compilador da ling
 
 ```
 
+
+
 gcc main.c usuarios.c catalogo.c carrinho.c checkout.c posvenda.c -o glowup
 
 ```
