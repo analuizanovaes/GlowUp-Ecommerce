@@ -32,14 +32,14 @@ void buscarProdutoPorNome() {
     int encontrado = 0;
 
     printf("\nDigite uma palavra para buscar no catalogo: ");
-    scanf(" %[^\n]", termo_busca); 
+    scanf(" %99[^\n]", termo_busca);
 
     printf("\n=================================================================\n");
     printf("|                      RESULTADOS DA BUSCA                      |\n");
     printf("=================================================================\n");
     
     for (int i = 0; i < total_produtos; i++) {
-        if (strstr(catalogo[i].nome, termo_busca) != NULL) {
+        if (strstr(catalogo[i].nome, termo_busca) != NULL || strstr(catalogo[i].categoria, termo_busca) != NULL) {
             printf("| ID: %-2d | %-30s | R$ %-6.2f | Estq: %-2d |\n",
                    catalogo[i].id, 
                    catalogo[i].nome, 
