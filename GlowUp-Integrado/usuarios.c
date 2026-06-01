@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "usuarios.h"
-#include "variaveis_globais.h" 
+#include "variaveis_globais.h"
 
 int cpfExiste(char cpf[])
 {
@@ -9,7 +9,7 @@ int cpfExiste(char cpf[])
     {
         if (strcmp(cpf, usuarios[i].cpf) == 0)
         {
-            return 1; 
+            return 1;
         }
     }
     return 0;
@@ -38,21 +38,22 @@ void cadastrarUsuario()
     Usuario novo;
 
     printf("\nNome: ");
-    scanf(" %[^\n]", novo.nome);
-
-    printf("Idade: ");
-    scanf("%d", &novo.idade);
-
+    scanf(" %99[^\n]", novo.nome);
     while (getchar() != '\n');
 
-    if (novo.idade < 16)
+    printf("Idade: ");
+    if (scanf("%d", &novo.idade) != 1)
     {
-        printf("Idade minima e 16 anos\n");
+        printf(">> Erro: Entrada invalida. Digite apenas numeros.\n");
+        while (getchar() != '\n')
+            ;
         return;
     }
+    while (getchar() != '\n');
 
     printf("CPF: ");
-    scanf("%s", novo.cpf);
+    scanf("%14s", novo.cpf);
+    while (getchar() != '\n'); 
 
     if (cpfExiste(novo.cpf))
     {
@@ -61,7 +62,9 @@ void cadastrarUsuario()
     }
 
     printf("Email: ");
-    scanf("%s", novo.email);
+    scanf("%99s", novo.email);
+    while (getchar() != '\n')
+        ; // Limpa o buffer
 
     if (emailExiste(novo.email))
     {
@@ -70,13 +73,19 @@ void cadastrarUsuario()
     }
 
     printf("Senha: ");
-    scanf("%s", novo.senha);
+    scanf("%49s", novo.senha);
+    while (getchar() != '\n')
+        ; // Limpa o buffer
 
     printf("Endereco: ");
-    scanf(" %[^\n]", novo.endereco);
+    scanf(" %199[^\n]", novo.endereco);
+    while (getchar() != '\n')
+        ; // Limpa o buffer
 
     printf("Telefone: ");
-    scanf("%s", novo.telefone);
+    scanf("%19s", novo.telefone);
+    while (getchar() != '\n')
+        ; // Limpa o buffer
 
     novo.bloqueado = 0;
 
@@ -95,10 +104,10 @@ int realizarLogin()
     while (tentativas < MAX_TENTATIVAS)
     {
         printf("\nEmail: ");
-        scanf("%s", email);
+        scanf("%49s", email);
 
         printf("Senha: ");
-        scanf("%s", senha);
+        scanf("%19s", senha);
 
         for (int i = 0; i < totalUsuarios; i++)
         {
@@ -113,7 +122,7 @@ int realizarLogin()
                 if (strcmp(senha, usuarios[i].senha) == 0)
                 {
                     printf("Login realizado\n");
-                    return i; 
+                    return i;
                 }
             }
         }
@@ -140,17 +149,18 @@ void editarDados(int indice)
     }
 
     printf("\nNovo endereco: ");
-    scanf(" %[^\n]", usuarios[indice].endereco);
-    while (getchar() != '\n'); 
+    scanf(" %199[^\n]", usuarios[indice].endereco);
+    while (getchar() != '\n')
+        ;
 
     printf("Novo telefone: ");
-    scanf("%s", usuarios[indice].telefone);
+    scanf("%19s", usuarios[indice].telefone);
 
     printf("Novo email: ");
-    scanf("%s", usuarios[indice].email);
+    scanf("%99s", usuarios[indice].email);
 
     printf("Nova senha: ");
-    scanf("%s", usuarios[indice].senha);
+    scanf("%49s", usuarios[indice].senha);
 
     printf("\n>> Dados atualizados com sucesso!\n");
     printf(">> (Lembre-se: os dados nao sao salvos se voce fechar o terminal!)\n");
