@@ -2,8 +2,7 @@
 #define ESTRUTURAS_H
 
 // =======================================================================
-// Aqui criamos os moldes dos dados. Não tem lógica de programação aqui, 
-// apenas a estrutura do que é um Usuário, um Produto, etc.
+// Definição das estruturas de dados globais do sistema
 // =======================================================================
 
 // Definição do perfil de usuário (Quem compra)
@@ -14,13 +13,11 @@ typedef struct {
     char email[100];
     char senha[50];
     
-    // --- CORREÇÃO LOGÍSTICA (CT-09 e CT-22) ---
-    // Dividir o endereço em campos específicos isola os dados.
-    // Evita falsos-positivos com "brasilia" em outras partes do texto.
-    char logradouro[100]; // Armazena o nome da Rua/Avenida
-    char numero[10];      // Armazena o número da residência (ajuda na validação da vírgula)
-    char cidade[50];      // Armazena estritamente a Cidade (Filtragem limpa para o CT-22)
-    char uf[3];           // Armazena a Unidade Federativa (Ex: DF, SP, RJ)
+    // Campos de endereço divididos para fins de validação logística
+    char logradouro[100]; 
+    char numero[10];      
+    char cidade[50];      
+    char uf[3];           
 } Usuario;
 
 // Definição do produto no catálogo (O que é vendido)
