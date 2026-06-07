@@ -2,11 +2,9 @@
 #define USUARIOS_H
 
 
-//maximo de usuarios
 #define MAX 10
-
-// maximo de tentativas
 #define MAX_TENTATIVAS 3
+
 
 
 typedef struct {
@@ -19,7 +17,6 @@ typedef struct {
     char endereco[100];
     char telefone[20];
 
-    //indica se a conta está bloqueada
     int bloqueado;
 
 } Usuario;
@@ -31,15 +28,31 @@ extern int totalUsuarios;
 
 
 
-int cpfExiste(char cpf[]);
-int emailExiste(char email[]);
+
+int validarNome(char nome[]);
+int validarIdadeEntrada(char idade[]);
+int validarIdade(int idade);
+int validarCPF(char cpf[]);
+int validarEmail(char email[]);
+int validarEndereco(char endereco[]);
+int validarTelefone(char telefone[]);
+
+
 
 void cadastrarUsuario();
 
+
+
 int realizarLogin();
+
+
 
 void editarDados(int indice);
 
+
+
 void listarUsuarios();
+
+
 
 #endif
