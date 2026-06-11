@@ -1,5 +1,9 @@
 # 💄 Projeto GlowUp - E-commerce de Cosméticos
 
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
+![GCC](https://img.shields.io/badge/gcc-%231A2C37.svg?style=for-the-badge&logo=gnu&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge)
+
 Bem-vindo ao repositório do **GlowUp**, um sistema de e-commerce desenvolvido como requisito parcial para a disciplina de Projeto Integrador de Programação Estruturada do Centro Universitário Euroamericano (UNIEURO).
 
 ## 🎯 Objetivo do Projeto
@@ -27,36 +31,40 @@ gcc main.c usuarios.c catalogo.c carrinho.c checkout.c posvenda.c -o glowup
 
 4. Execute o sistema recém-compilado:
 
+* **No Windows:**
+
 ```bash
-# No Windows
 .\glowup.exe
 
-# No Linux/Mac
+```
+
+* **No Linux/Mac:**
+
+```bash
 ./glowup
 
 ```
 
-## 🛒 Funcionalidades Principais (Backlog)
+## 🛒 Funcionalidades Principais
 
-As seguintes Histórias de Usuário (HUs) compõem o escopo da nossa aplicação:
+O escopo da nossa aplicação abrange todo o fluxo essencial de um comércio eletrônico:
 
-* **Gestão de Conta:** Cadastro (HU01), Login (HU02) e Gerenciamento de Dados Cadastrais (HU03).
-* **Experiência de Compra:** Busca de produtos no catálogo (HU04) e adição de itens ao carrinho (HU05).
-* **Checkout e Pagamento:** Finalização do pedido com validação de endereço (HU06) e processamento simulado de pagamento via PIX, Boleto ou Cartão (HU07).
-* **Pós-Venda:** Acompanhamento de entrega (HU08) e avaliação de compra (HU09).
-* **Controle Financeiro e Logístico:** Simulação de Gateway de Pagamento e faturamento de compras com geração de número de pedido (HG01 e HG02).
+* **Gestão de Conta:** Cadastro de novos usuários, sistema de login seguro e gerenciamento de dados cadastrais com endereço de entrega.
+* **Experiência de Compra:** Navegação completa pelo catálogo de cosméticos, busca integrada por nome ou categoria e adição dinâmica de itens ao carrinho de compras.
+* **Checkout e Pagamento:** Consolidação do pedido, validação logística de endereço, aplicação de cupons de desconto e processamento simulado de pagamentos via PIX, Boleto ou Cartão.
+* **Pós-Venda:** Consulta e acompanhamento do status de entrega do pedido e sistema de avaliação dos produtos adquiridos.
+* **Controle Logístico:** Baixa automatizada de itens no inventário em tempo real e geração de faturamento com número exclusivo de pedido.
 
 ## 👥 Equipe de Desenvolvimento
 
 Projeto construído de forma colaborativa pelas turmas ADS03M1 e SI03M1:
 
-* Ana Luiza Fernandes Novaes
-* Emerson Júnior de Santana Oliveira Leite
-* Maria Luiza Vicente da Silva Lacerda
-* Marcelo Leitão e Silva Filho
-* Sthefanny Ramos Parrini
-* Yasmin Gomes de Matos
+* [Ana Luiza Fernandes Novaes](https://github.com/analuizanovaes)
+* [Emerson Júnior de Santana Oliveira Leite](https://github.com/emersonjuniorgit)
+* [Maria Luiza Vicente da Silva Lacerda](https://github.com/Ma-Luh)
+* [Marcelo Leitão e Silva Filho](marleitaofilho-hue)
+* [Sthefanny Ramos Parrini](https://github.com/Sthef93)
+* [Yasmin Gomes de Matos](https://github.com/yasminmatosg)
 
 **Orientador:** Prof. Paulo Augusto
-
 **Instituição:** UNIEURO - Brasília, 2026
