@@ -57,7 +57,7 @@ O escopo da nossa aplicação abrange todo o fluxo essencial de um comércio ele
 
 ## 👥 Equipe de Desenvolvimento
 
-Projeto construído de forma colaborativa pelas turmas ADS03M1 e SI03M1:
+Equipe de desenvolvimento composta por alunos das turmas ADS03M1 e SI03M1:
 
 * [Ana Luiza Fernandes Novaes](https://github.com/analuizanovaes)
 * [Emerson Júnior de Santana Oliveira Leite](https://github.com/emersonjuniorgit)
